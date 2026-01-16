@@ -1,0 +1,1 @@
+{"properties":{"name":{"description":"The name of the model (LLM)","nullable":true,"type":"string"},"version":{"description":"The version of the model (LLM)","nullable":true,"type":"string"}},"required":["name","version"],"type":"object","x-readme-ref-name":"ModelInfo"}

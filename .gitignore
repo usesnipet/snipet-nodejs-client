@@ -1,0 +1,32 @@
+# dependências
+node_modules/
+
+# build
+dist/
+out/
+build/
+
+# pacotes criados localmente
+*.tgz
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# sistemas
+.DS_Store
+Thumbs.db
+
+# Ambiente / editor
+.env
+.env.*
+*.swp
+.idea/
+.vscode/
+
+# caches
+.cache/
+.eslintcache
+.turbo/

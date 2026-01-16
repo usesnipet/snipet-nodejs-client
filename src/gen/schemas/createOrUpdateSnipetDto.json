@@ -1,0 +1,1 @@
+{"properties":{"metadata":{"additionalProperties":true,"description":"Metadata of the snipet","type":"object"},"name":{"nullable":true,"type":"string"}},"type":"object","x-readme-ref-name":"CreateOrUpdateSnipetDto"}

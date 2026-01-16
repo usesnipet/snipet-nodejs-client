@@ -1,0 +1,1 @@
+{"properties":{"executionId":{"format":"uuid","type":"string"}},"required":["executionId"],"type":"object","x-readme-ref-name":"ExecuteSnipetResponseDto"}

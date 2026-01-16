@@ -1,0 +1,51 @@
+{
+  "name": "@snipet/nodejs-client",
+  "version": "0.0.1",
+  "main": "./dist/client.cjs",
+  "module": "./dist/client.js",
+  "types": "./dist/client.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js",
+      "require": "./dist/client.cjs"
+    }
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "npm run generate && tsup src/client.ts --format esm,cjs --dts",
+    "generate": "kubb generate",
+    "example": "node scripts/run-example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/snipet/sdk/nodejs-snipet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/snipet/sdk/nodejs-snipet/issues"
+  },
+  "homepage": "https://gitlab.com/snipet/sdk/nodejs-snipet#readme",
+  "devDependencies": {
+    "@kubb/cli": "^4.12.15",
+    "@kubb/core": "^4.12.15",
+    "@kubb/plugin-client": "^4.12.15",
+    "@kubb/plugin-oas": "^4.12.15",
+    "@kubb/plugin-ts": "^4.12.15",
+    "@types/node": "^24.10.1",
+    "dotenv": "^17.2.3",
+    "rimraf": "^6.1.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "rxjs": "^7.8.2"
+  }
+}

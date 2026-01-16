@@ -1,0 +1,1 @@
+{"properties":{"view":{"enum":["chat"],"type":"string"}},"required":["view"],"type":"object","x-readme-ref-name":"ViewDto"}

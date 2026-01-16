@@ -1,0 +1,1 @@
+{"properties":{"name":{"description":"The name of the knowledge base","type":"string"},"namespace":{"description":"The namespace of the knowledge base","nullable":true,"type":"string"}},"required":["name"],"type":"object","x-readme-ref-name":"CreateKnowledgeDto"}

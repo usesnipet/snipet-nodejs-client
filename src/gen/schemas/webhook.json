@@ -1,0 +1,1 @@
+{"properties":{"event":{"description":"On call this event in core, this webhook will be called","type":"string"},"url":{"description":"The url of the webhook","format":"uri","type":"string"}},"required":["event","url"],"type":"object","x-readme-ref-name":"Webhook"}

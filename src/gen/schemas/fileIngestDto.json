@@ -1,0 +1,1 @@
+{"properties":{"externalId":{"type":"string"},"metadata":{"type":"string"},"saveFile":{"description":"Indicates if the file should be saved in the storage","type":"boolean"}},"type":"object","x-readme-ref-name":"FileIngestDto"}

@@ -1,0 +1,1 @@
+{"properties":{"state":{"enum":["PENDING","IN_PROGRESS","COMPLETED","FAILED"],"type":"string"}},"required":["state"],"type":"object","x-readme-ref-name":"IngestJobStateResponseDto"}

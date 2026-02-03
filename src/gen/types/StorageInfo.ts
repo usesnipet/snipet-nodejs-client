@@ -6,10 +6,10 @@
 
 export type StorageInfo = {
     /**
-     * @description The key of the storage, where the asset is stored
-     * @type string
+     * @description The path of the storage, where the asset is stored
+     * @type string | undefined
     */
-    key: string | null;
+    path?: string;
     /**
      * @description Indicates if the asset is persisted
      * @type boolean

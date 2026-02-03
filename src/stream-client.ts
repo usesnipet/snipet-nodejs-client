@@ -91,9 +91,6 @@ export const createStreamClient = (
               return;
             }
 
-
-            console.log("SSE connection established", res.status, res.statusText);
-
             const reader = res.body.getReader();
             const decoder = new TextDecoder();
             let buffer = "";
@@ -113,7 +110,6 @@ export const createStreamClient = (
               }
             }
 
-            console.log("SSE stream completed");
             subscriber.complete();
           })
           .catch((err) => {

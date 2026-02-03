@@ -52,7 +52,6 @@ export const createHttpClient = (
   return {
     fetcher: async (path, options = {}) => {
       const url = resolveUrl(path, options.pathParams, options.query);
-      console.log(url);
 
       const response = await fetch(url, {
         method: options.method ?? "GET",

@@ -11,14 +11,6 @@ export const executeSnipetContextKnowledgeOptionsSearchTypesEnum = {
 
 export type ExecuteSnipetContextKnowledgeOptionsSearchTypesEnumKey = (typeof executeSnipetContextKnowledgeOptionsSearchTypesEnum)[keyof typeof executeSnipetContextKnowledgeOptionsSearchTypesEnum];
 
-export const executeSnipetContextKnowledgeOptionsUseEnum = {
-    "force": "force",
-    "ignore": "ignore",
-    "auto": "auto"
-} as const;
-
-export type ExecuteSnipetContextKnowledgeOptionsUseEnumKey = (typeof executeSnipetContextKnowledgeOptionsUseEnum)[keyof typeof executeSnipetContextKnowledgeOptionsUseEnum];
-
 export type ExecuteSnipetContextKnowledgeOptions = {
     /**
      * @type object | undefined
@@ -41,8 +33,8 @@ export type ExecuteSnipetContextKnowledgeOptions = {
     */
     topK?: number;
     /**
-     * @description force/ignore/auto policy for knowledge, this indicates if should filter the knowledge
-     * @type string
+     * @description This indicates if should search in the knowledge base
+     * @type boolean
     */
-    use: ExecuteSnipetContextKnowledgeOptionsUseEnumKey;
+    use: boolean;
 };

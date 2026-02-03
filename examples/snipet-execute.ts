@@ -8,7 +8,7 @@ const snipetId = vars.snipetId;
 const execute: ExecuteSnipetDto = {
   options: {
     intent: "answer",
-    query: "Hello, who are you?",
+    query: "Explique detalhadamente o que é uma API?",
     stream: true,
     persistenceType: "full",
   }

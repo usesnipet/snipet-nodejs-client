@@ -5,29 +5,31 @@
 
 import type { ApiKeyEntity } from "./ApiKeyEntity.ts";
 import type { ContentInfo } from "./ContentInfo.ts";
-import type { ExecutionEntity } from "./ExecutionEntity.ts";
 import type { KnowledgeEntity } from "./KnowledgeEntity.ts";
 import type { ModelInfo } from "./ModelInfo.ts";
-import type { SnipetEntity } from "./SnipetEntity.ts";
 import type { StorageInfo } from "./StorageInfo.ts";
 
-export const assetEntityDomainEnum = {
-    "SNIPET": "SNIPET",
-    "KNOWLEDGE": "KNOWLEDGE"
+export const knowledgeAssetEntityStatusEnum = {
+    "PENDING": "PENDING",
+    "INDEXING": "INDEXING",
+    "INDEXED": "INDEXED",
+    "FAILED": "FAILED"
 } as const;
 
-export type AssetEntityDomainEnumKey = (typeof assetEntityDomainEnum)[keyof typeof assetEntityDomainEnum];
+export type KnowledgeAssetEntityStatusEnumKey = (typeof knowledgeAssetEntityStatusEnum)[keyof typeof knowledgeAssetEntityStatusEnum];
 
-export const assetEntitySourceEnum = {
-    "USER": "USER",
-    "AI": "AI",
-    "SYSTEM": "SYSTEM",
-    "INTEGRATION": "INTEGRATION"
+export const knowledgeAssetEntityTypeEnum = {
+    "FILE": "FILE",
+    "TEXT": "TEXT"
 } as const;
 
-export type AssetEntitySourceEnumKey = (typeof assetEntitySourceEnum)[keyof typeof assetEntitySourceEnum];
+export type KnowledgeAssetEntityTypeEnumKey = (typeof knowledgeAssetEntityTypeEnum)[keyof typeof knowledgeAssetEntityTypeEnum];
 
-export type AssetEntity = {
+export type KnowledgeAssetEntity = {
+    /**
+     * @type string | undefined, uuid
+    */
+    connectorId?: string;
     /**
      * @type object | undefined
     */
@@ -52,26 +54,13 @@ export type AssetEntity = {
     */
     deletedAt: string;
     /**
-     * @description The domain of the asset (Knowledge or Snipet)
-     * @type string
+     * @type string | undefined
     */
-    domain: AssetEntityDomainEnumKey;
+    error?: string;
     /**
-     * @type object | undefined
+     * @type string | undefined, uuid
     */
-    execution?: ExecutionEntity;
-    /**
-     * @description The unique identifier for the execution asset
-     * @type string, uuid
-    */
-    executionId: string;
-    /**
-     * @description Extra data of the asset
-     * @type object | undefined
-    */
-    extraData?: {
-        [key: string]: any;
-    };
+    externalId?: string;
     /**
      * @description The unique identifier for the entity
      * @type string, uuid
@@ -98,28 +87,17 @@ export type AssetEntity = {
     */
     model?: ModelInfo;
     /**
-     * @type object | undefined
-    */
-    snipet?: SnipetEntity;
-    /**
-     * @description The unique identifier for the snipet asset
-     * @type string, uuid
-    */
-    snipetId: string;
-    /**
-     * @description The source of the asset (USER, AI, SYSTEM, INTEGRATION)
      * @type string
     */
-    source: AssetEntitySourceEnumKey;
+    status: KnowledgeAssetEntityStatusEnumKey;
     /**
      * @type object | undefined
     */
     storage?: StorageInfo;
     /**
-     * @description Indicates the type of the asset, if it is a file, text, user question, ai response...
      * @type string
     */
-    type: string;
+    type: KnowledgeAssetEntityTypeEnumKey;
     /**
      * @description The timestamp when the entity was last updated
      * @type string, date-time

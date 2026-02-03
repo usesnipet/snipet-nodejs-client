@@ -11,14 +11,6 @@ export const executeSnipetContextSnipetOptionsSearchTypesEnum = {
 
 export type ExecuteSnipetContextSnipetOptionsSearchTypesEnumKey = (typeof executeSnipetContextSnipetOptionsSearchTypesEnum)[keyof typeof executeSnipetContextSnipetOptionsSearchTypesEnum];
 
-export const executeSnipetContextSnipetOptionsUseEnum = {
-    "force": "force",
-    "ignore": "ignore",
-    "auto": "auto"
-} as const;
-
-export type ExecuteSnipetContextSnipetOptionsUseEnumKey = (typeof executeSnipetContextSnipetOptionsUseEnum)[keyof typeof executeSnipetContextSnipetOptionsUseEnum];
-
 export type ExecuteSnipetContextSnipetOptions = {
     /**
      * @type object | undefined
@@ -45,8 +37,8 @@ export type ExecuteSnipetContextSnipetOptions = {
     */
     topK?: number;
     /**
-     * @description force/ignore/auto policy for snipet memory, this indicates if should filter the memories
-     * @type string
+     * @description This indicates if should search in the snipet
+     * @type boolean
     */
-    use: ExecuteSnipetContextSnipetOptionsUseEnumKey;
+    use: boolean;
 };

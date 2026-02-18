@@ -61,7 +61,6 @@ export type { MCPResource } from "./MCPResource.ts";
 export type { MCPTool } from "./MCPTool.ts";
 export type { ModelInfo } from "./ModelInfo.ts";
 export type { OutputOptions } from "./OutputOptions.ts";
-export type { Set } from "./Set.ts";
 export type { SnipetEntity } from "./SnipetEntity.ts";
 export type { SnipetExecutePathParams, SnipetExecute201, SnipetExecute400, SnipetExecute409, SnipetExecute500, SnipetExecuteMutationRequest, SnipetExecuteMutationResponse, SnipetExecuteMutation } from "./SnipetExecute.ts";
 export type { SnipetMemoryEntityIntentEnumKey, SnipetMemoryEntityTypeEnumKey, SnipetMemoryEntity } from "./SnipetMemoryEntity.ts";
